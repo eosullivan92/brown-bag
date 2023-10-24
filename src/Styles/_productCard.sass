@@ -1,0 +1,97 @@
+@use 'colors'
+@use 'layout'
+
+.productCard__container
+	@include layout.flex-row()
+	height: 200px
+	width: 550px
+	background: #fff
+	border-radius: 8px
+
+	.productCard__image-container
+		width: 40%
+
+		img
+			width: 100%
+			height: 100%
+			background-size: cover
+			
+			
+	.productCard__content
+		color: colors.$darkest-grey
+		padding: 2em
+		@include layout.flex-column()
+		justify-content: space-around
+		gap: 1em
+
+		.productCard__content-heading
+			@include layout.flex-row()
+			justify-content: space-between
+			
+			h3
+				font-weight: 500
+
+			p
+				font-size: 1.2rem
+				font-weight: 700
+
+		.productCard__description
+			color: colors.$dark-grey
+
+
+		.productCard__control
+			@include layout.flex-row()
+			gap: 0.5em
+			justify-content: flex-start
+
+			// .ghost
+			//     margin-right: 5em
+			//     background-color: red
+
+			.secondary
+				background-color: blue
+
+			.primary
+				background-color: green
+
+
+
+			.ghost
+				color: colors.$darkest-grey
+				background-color: transparent
+				border: none
+				margin: 0 6em 0 0 
+				padding: 0
+				font-weight: 700
+				position: relative
+				&::after
+					position: absolute
+					content: ''
+					height: 2px
+					bottom: -2px
+					background-color: colors.$darkest-grey
+					margin: 0 auto
+					left: 0
+					right: 0
+					width: 0%
+					transition:.5s
+						
+				&:hover:after 
+					width: 80%
+
+			.secondary
+				background-color: colors.$lighter-grey
+				color: colors.$darkest-grey
+				font-weight: 700
+				border: none
+
+			.primary
+				background-color: colors.$darkest-grey
+				color: colors.$lighter-grey
+				font-weight: 700
+				border: none
+
+
+
+
+	

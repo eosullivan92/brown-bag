@@ -1,0 +1,37 @@
+@use 'colors'
+@use 'layout'
+
+    
+*,*::before, *::after 
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+
+body
+    @include layout.flex-column-center()
+    height: 100vh
+    background-color: colors.$lighter-grey
+    font: 100% sans-serif
+
+.main__container
+    @include layout.flex-column-center()
+    
+
+a
+    text-decoration: none
+    color: colors.$darker-grey
+    outline-color: colors.$darker-grey
+
+li
+    list-style: none
+
+button
+    @include colors.color-scheme(colors.$darker-grey, colors.$lightest-grey)
+    border-radius: 7px
+    padding: 0.5em 1.2em
+    border: none
+    &:focus
+        background: colors.$dark-grey
+    &:hover
+         @include colors.color-scheme(colors.$light-grey, colors.$darker-grey)

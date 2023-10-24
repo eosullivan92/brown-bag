@@ -1,0 +1,16 @@
+$lightest-grey: #F0F4F8
+$lighter-grey: #D9E2EC
+$light-grey: #BCCCDC
+
+$darkest-grey: #334E68
+$darker-grey: #243B53
+$dark-grey: #627D98
+
+$accent: #9d4edd
+
+$scheme-default: $lightest-grey, $darkest-grey
+$scheme-secondary: $dark-grey, $lightest-grey
+
+@mixin color-scheme($bg, $text)
+    background: $bg
+    color: $text
