@@ -1,6 +1,8 @@
 import Avatar from './Components/Avatar';
 import AvatarRefactored from './Components/AvatarRefactored';
+import HeroImage from './Components/HeroImage';
 import ProductCard from './Components/ProductCard';
+import Sidebar from './Components/Sidebar';
 
 function App() {
 	return (
@@ -9,7 +11,10 @@ function App() {
 				{/* <Avatar />
 				<AvatarRefactored /> */}
 
-				<ProductCard />
+				{/* <ProductCard /> */}
+
+				{/* <HeroImage /> */}
+				<Sidebar />
 			</div>
 
 			{/* Show dynamic classes e.g. display: none*/}
