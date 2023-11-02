@@ -2,6 +2,8 @@ export default function Avatar() {
 	return (
 		<>
 			{/* LABELS ARE BAD */}
+			{/* Less borders */}
+			{/* Whitespace is your friend */}
 			{/* Create a heirachy */}
 
 			<div className='avatar__container'>

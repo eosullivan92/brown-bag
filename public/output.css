@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap';
 *, *::before, *::after {
   padding: 0;
   margin: 0;
@@ -9,10 +10,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4em;
+  gap: 1em;
   height: 100vh;
-  background-color: #D9E2EC;
   font: 100% sans-serif;
+  background: none;
 }
 
 .main__container {
@@ -20,7 +21,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4em;
+  gap: 1em;
+  background: #F0F4F8;
+  color: #334E68;
+  height: 100vh;
+  width: 100vw;
+}
+.main__container--dark {
+  background: #243B53;
+  color: #F0F4F8;
 }
 
 a {
@@ -31,6 +40,21 @@ a {
 
 li {
   list-style: none;
+}
+
+button {
+  background: #243B53;
+  color: #F0F4F8;
+  border-radius: 7px;
+  padding: 0.5em 1.2em;
+  border: none;
+}
+button:focus {
+  background: #627D98;
+}
+button:hover {
+  background: #BCCCDC;
+  color: #243B53;
 }
 
 .avatar__container {
@@ -61,7 +85,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4em;
+  gap: 1em;
 }
 .avatar__container .avatar__content-container ul li {
   padding: 5px;
@@ -98,7 +122,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4em;
+  gap: 1em;
   color: #334E68;
   padding-left: 1em;
 }
@@ -201,7 +225,8 @@ li {
   top: 0;
   left: 0;
   width: 90px;
-  padding-left: 2em;
+  padding-left: 1em;
+  margin: 0 auto;
   padding-top: 2em;
   background: #BCCCDC;
   transition: width 0.4s ease-in-out;
@@ -230,6 +255,27 @@ li {
 }
 .sidebar .sidebar__navigation .sidebar__nav-link--visible {
   transform: translateX(0%);
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  height: 100%;
+  width: 50%;
+  background: none;
+}
+.home__container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+  font-family: "Bebas Neue", sans-serif;
+}
+.home__container p {
+  font-size: 4.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
 }
 
 /*# sourceMappingURL=output.css.map */

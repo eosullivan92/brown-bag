@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { IconContext } from 'react-icons';
 import { SlMenu } from 'react-icons/sl';
 import { TfiClose } from 'react-icons/tfi';
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
 	const [open, setOpen] = useState(false);
@@ -23,6 +24,15 @@ export default function Sidebar() {
 				</button>
 
 				<ul className='sidebar__navigation'>
+				<li
+						className={
+							open
+								? 'sidebar__nav-link sidebar__nav-link--visible'
+								: 'sidebar__nav-link'
+						}
+					>
+						<Link to='/'>Home</Link>
+					</li>
 					<li
 						className={
 							open
@@ -30,7 +40,7 @@ export default function Sidebar() {
 								: 'sidebar__nav-link'
 						}
 					>
-						<a>Home</a>
+						<Link to='/avatar'>Avatar</Link>
 					</li>
 
 					<li
@@ -40,7 +50,7 @@ export default function Sidebar() {
 								: 'sidebar__nav-link'
 						}
 					>
-						<a>Portfolio</a>
+						<Link to='/product'>Product Card</Link>
 					</li>
 					<li
 						className={
@@ -49,7 +59,7 @@ export default function Sidebar() {
 								: 'sidebar__nav-link'
 						}
 					>
-						<a>Contact</a>
+						<Link to='/hero'>Hero Image</Link>
 					</li>
 				</ul>
 			</IconContext.Provider>
