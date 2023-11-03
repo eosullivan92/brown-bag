@@ -12,7 +12,7 @@ function App() {
 	return (
 		<>
 			<div className={dark ? 'main__container main__container--dark' : 'main__container'}>
-			<Sidebar />
+			<Sidebar dark={dark}/>
 				<Routes>
 					<Route path={'/'} element={<Home setDark={setDark} dark={dark} />} />
 					<Route path={'/avatar'} element={<>

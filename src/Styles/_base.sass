@@ -23,7 +23,7 @@ body
     
     &--dark
         @include colors.color-scheme(colors.$scheme-secondary ...)
-        
+            
 
 a
     text-decoration: none
@@ -34,11 +34,25 @@ li
     list-style: none
 
 button
-    @include colors.color-scheme(colors.$darker-grey, colors.$lightest-grey)
-    border-radius: 7px
-    padding: 0.5em 1.2em
+    @include colors.color-scheme(colors.$scheme-secondary ...)
+    border-radius: 6px
+    padding: 0.8em 1.4em
     border: none
-    &:focus
-        background: colors.$dark-grey
     &:hover
-         @include colors.color-scheme(colors.$light-grey, colors.$darker-grey)
+         @include colors.color-scheme(colors.$scheme-default ...)
+         border: 1px solid colors.$dark-grey
+    
+
+
+
+
+    
+// ADD BELOW DARK MODE STYLES
+ // button
+        //     @include colors.color-scheme(colors.$scheme-default ...)
+        //     border-radius: 6px
+        //     padding: 0.8em 1.4em
+        //     border: none
+        //     &:hover
+        //         @include colors.color-scheme(colors.$scheme-secondary ...)
+        //         border: 1px solid colors.$light-grey  

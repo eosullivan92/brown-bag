@@ -8,37 +8,46 @@
     top: 0
     left: 0
     width: layout.$sidebar
-    padding-left: 1em
-    margin: 0 auto
-    padding-top: 2em
-    background: colors.$light-grey
     transition: width 0.4s ease-in-out
     z-index: 10
 
     &--open 
         width: layout.$sidebar-open
+        
+    .sidebar__color
+        padding-top: 2em
+        padding-left: 1em
+        height: 100%
+        width: 100%
+        @include colors.color-scheme(colors.$scheme-secondary ...)
 
+        &--dark
+            @include colors.color-scheme(colors.$scheme-default ...)
 
-    .sidebar__btn
-        width: 30px
-        background: transparent
-        border: none
-       
+        .sidebar__btn
+            width: 30px
+            background: transparent
+            border: none
+        
 
-    .sidebar__navigation
-        padding-top: 5em
+        .sidebar__navigation
+            padding-top: 5em
+            padding-left: 1em
 
-        .sidebar__nav-link
-            margin-bottom: 3em
-            transform: translateX(-170%)
-            font-size: 1.1rem
-            transition: transform 0.4s ease-in-out
+            .sidebar__nav-link
+                margin-bottom: 3em
+                transform: translateX(-170%)
+                font-size: 1.1rem
+                transition: transform 0.4s ease-in-out
+                &:hover
+                    transform: translateX(20px)
+                    transition: transform 0.1s ease-in-out
+                
+                &--visible
+                    transform: translateX(0%)
+                  
 
-            &:hover
-                transform: translateX(20px)
-                transition: transform 0.1s ease-in-out
-            
-            &--visible
-                transform: translateX(0%)
+                // a
+                //     color: inherit
 
     
